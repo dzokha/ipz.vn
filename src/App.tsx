@@ -80,15 +80,12 @@ function App() {
             <span className="arrow-icon">→</span>
           </h2>
           <p className="card-desc">
-            SDN-FlexShield Sentinel là một tiện ích mở rộng trình duyệt mã nguồn mở giúp nâng cao nhận thức an ninh mạng của người dùng thông qua cơ chế phát hiện lừa đảo (phishing) phía máy khách có khả năng giải thích được.
-            <br/>
-            Hệ thống phân tích nội dung trang web ngay trên thiết bị của người dùng bằng cách sử dụng các chỉ báo bảo mật có thể diễn giải và cơ chế chấm điểm rủi ro minh bạch. Thay vì chỉ đơn thuần đánh dấu các trang web đáng ngờ, hệ thống còn giải thích lý do tại sao cảnh báo được kích hoạt, giúp người dùng hiểu rõ hơn về các mối đe dọa trực tuyến, bảo vệ quyền riêng tư và đưa ra các quyết định duyệt web an toàn hơn.
-          
+            Một tiện ích mở rộng trình duyệt mã nguồn mở giúp nâng cao nhận thức an ninh mạng của người dùng thông qua cơ chế phát hiện lừa đảo (phishing) phía máy khách có khả năng giải thích được.
           </p>
           <div className="tags">
-            <span className="tag">Cybersecurity UI</span>
-            <span className="tag">React Dashboard</span>
-            <span className="tag">Data Viz</span>
+            <span className="tag">Phishing Detection</span>
+            <span className="tag">Explainable Security</span>
+            <span className="tag">Browser Extension</span>
           </div>
         </div>
 
@@ -105,27 +102,27 @@ function App() {
             Công cụ tự động chú giải gen sinh học. Thiết kế tối giản (Minimalism) tập trung tuyệt đối vào hiển thị dữ liệu phức tạp, giúp các nhà nghiên cứu thao tác nhanh hơn.
           </p>
           <div className="tags">
-            <span className="tag">AI Interface</span>
+            <span className="tag">Genome Annotation</span>
             <span className="tag">Bioinformatics</span>
-            <span className="tag">Python</span>
+            <span className="tag">Spring</span>
           </div>
         </div>
 
         {/* Project 3 */}
         <div className="project-card" onClick={() => window.open("https://github.com/dzokha/IDS-AC", "_blank")}>
           <div className="card-top">
-             <span className="project-year">2023</span>
+             <span className="project-year">2021</span>
           </div>
           <h2 className="card-title">
             IDS-AC
             <span className="arrow-icon">→</span>
           </h2>
           <p className="card-desc">
-            IDS-AC là một hệ thống phát hiện xâm nhập thích ứng được phát triển dành cho người dùng kỹ thuật và sinh viên nhằm nghiên cứu, thử nghiệm và cải tiến các kỹ thuật phát hiện tấn công hiện đại.          </p>
+            Một hệ thống phát hiện xâm nhập thích ứng được phát triển dành cho người dùng kỹ thuật và sinh viên nhằm nghiên cứu, thử nghiệm và cải tiến các kỹ thuật phát hiện tấn công hiện đại.          </p>
           <div className="tags">
-            <span className="tag">E-commerce</span>
-            <span className="tag">Fullstack</span>
-            <span className="tag">UX Research</span>
+            <span className="tag">Intrusion Detection</span>
+            <span className="tag">Adaptive Security</span>
+            <span className="tag">Snort</span>
           </div>
         </div>
 

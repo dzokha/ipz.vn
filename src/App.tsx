@@ -7,11 +7,11 @@ function App() {
         
         {/* Phần Tên thương hiệu */}
         <h1 className="brand-alias">IPZ</h1>
-        <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO</h2>
+        <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
         
         {/* Điểm nhấn Rao bán */}
         <div className="sale-badge">TÊN MIỀN ĐANG ĐƯỢC RAO BÁN</div>
-        <p className="sale-subtitle">PREMIUM DOMAIN FOR SALE</p>
+        <p className="sale-subtitle">Bảo vệ Tài sản Trí tuệ của doanh nghiệp bằng tiêu chuẩn An ninh mạng khắt khe và tuyệt đối nhất.</p>
         
         {/* Thông tin liên hệ chuyên nghiệp */}
         <div className="contact-box">

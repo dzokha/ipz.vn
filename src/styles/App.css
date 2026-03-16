@@ -1,347 +1,105 @@
-/* --- SIDEBAR CHO DESKTOP --- */
-.sidebar {
-  width: 35%;
-  height: 100vh;
-  position: sticky;
-  top: 0;
+/* Bố cục căn giữa tuyệt đối */
+.landing-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  padding: 0 60px; /* Đã gộp padding của bạn lại */
-  border-right: 1px solid var(--border-subtle);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.sidebar-inner {
-  max-width: 300px; /* Giới hạn độ rộng để text trông chuyên nghiệp hơn */
-  height: 90%; /* Hoặc tùy chỉnh để tạo khoảng trống */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Đẩy Identity lên trên và Footer xuống dưới cùng */
+/* Khung nội dung chính */
+.content-container {
+  background: #ffffff;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  border-top: 6px solid var(--accent); /* Đường nhấn màu xanh trên cùng */
 }
 
-/* Identity Section */
+/* Typography */
 .brand-alias {
-  font-size: 3.5rem;
-  font-weight: 850;
+  font-size: 6rem;
+  font-weight: 900;
   letter-spacing: -0.05em;
+  line-height: 1;
   color: var(--text-main);
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 .brand-fullname {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.25em;
-  margin-top: 8px;
   color: var(--text-secondary);
-}
-
-.role-container { margin-top: 24px; }
-.role-en { display: block; font-size: 0.95rem; font-weight: 700; color: var(--accent); text-transform: uppercase; }
-.role-vn { display: block; font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 2px; }
-
-.separator {
-  width: 40px;
-  height: 2px;
-  background-color: var(--accent);
-  margin: 32px 0;
-}
-
-.intro-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  text-align: justify; /* Căn lề đều hai bên */
-  hyphens: auto;       /* Tự động ngắt từ nếu cần để tránh khoảng trắng quá lớn */
-}
-
-/* Navigation & Hover Effects */
-.nav-menu {
-  margin: 48px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-}
-
-/* Hiệu ứng thanh ngang khi hover */
-.nav-indicator {
-  width: 24px;
-  height: 1px;
-  background-color: var(--text-light);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-en {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--text-light);
-  letter-spacing: 0.1em;
-  transition: color 0.3s ease;
-}
-
-.nav-vn {
-  font-size: 0.7rem;
-  color: var(--text-light);
-  opacity: 0.5;
-}
-
-/* Trạng thái Hover hoặc Active */
-.nav-link:hover .nav-indicator, 
-.nav-link.active .nav-indicator {
-  width: 50px; /* Thanh ngang dài ra khi hover */
-  background-color: var(--text-main);
-}
-
-.nav-link:hover .nav-en, 
-.nav-link.active .nav-en {
-  color: var(--text-main);
-}
-
-/* Partner Logos Section */
-.partner-logos {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.p-logo {
-  height: 20px;
-  width: auto;
-  filter: grayscale(100%); /* Phong cách đen trắng chuyên nghiệp */
-  opacity: 0.4;
-  transition: all 0.3s ease;
-}
-
-.p-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.1); /* Phóng to nhẹ khi hover */
-}
-
-.sidebar-footer {
-  font-size: 0.7rem;
-  color: var(--text-light);
-  opacity: 0.6;
-  text-transform: uppercase;
-}
-
-
-.layout-wrapper {
-  display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  min-height: 100vh; /* Đảm bảo bao phủ toàn màn hình */
-}
-
-
-/* --- MAIN CONTENT --- */
-.main-content {
-  width: 65%;
-  padding: 100px 80px; /* Padding rộng tạo cảm giác thoáng đãng */
-}
-
-.section-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-light);
   margin-bottom: 40px;
 }
 
-/* --- PROJECT CARD: KHÔNG ẢNH - CHỈ CÓ TRẢI NGHIỆM --- */
-.project-card {
-  background: #ffffff;
-  padding: 40px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  border: 1px solid transparent; /* Chuẩn bị sẵn border */
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  /* Bóng đổ nhẹ mặc định */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02); 
+/* Nút Badge nổi bật */
+.sale-badge {
+  display: inline-block;
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  border: 1px solid #84E1BC;
 }
 
-/* Hiệu ứng Hover: Nổi lên & Border trái màu xanh */
-.project-card:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-  border-color: var(--border-subtle);
-}
-
-/* Thanh màu xanh trang trí bên trái khi hover */
-.project-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--accent);
-  border-radius: 4px 0 0 4px;
-  opacity: 0; /* Ẩn mặc định */
-  transition: opacity 0.3s;
-}
-
-.project-card:hover::before {
-  opacity: 1; /* Hiện lên khi hover */
-}
-
-/* Nội dung bên trong Card */
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.project-year {
-  font-family: monospace;
-  color: var(--text-light);
-  font-size: 0.85rem;
-}
-
-.card-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: var(--text-main);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Mũi tên chỉ hiện rõ khi hover */
-.arrow-icon {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-  color: var(--accent);
-  font-size: 1.5rem;
-}
-
-.project-card:hover .arrow-icon {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.card-desc {
+.sale-subtitle {
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  text-align: justify; /* Giúp các card trông vuông vức, gọn gàng hơn */
-}
-
-/* Tags công nghệ gọn gàng */
-.tags { display: flex; gap: 10px; flex-wrap: wrap; }
-.tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  background: #F1F5F9;
-  padding: 6px 14px;
-  border-radius: 6px;
-}
-.project-card:hover .tag {
-  background: #EFF6FF; /* Đổi màu nền tag nhẹ khi hover card */
-  color: var(--accent);
-}
-
-.about-section{
-
-  margin-top: 120px; /* Tăng khoảng cách để section "thở" tốt hơn */
-  max-width: 700px;
-  position: relative;
-}
-
-.about-content{
-  margin-top:20px;
-  color:#555;
-  line-height:1.7;
-  font-size:0.95rem;
-  text-align: justify; /* Căn lề đều cho nội dung nghiên cứu */
-}
-
-.about-content p{
-  margin-bottom:18px;
-}
-
-.about-skills{
-  margin-top:35px;
-}
-
-.skill-group{
-  margin-bottom: 35px;
-  padding-left: 20px;
-  border-left: 2px solid #f1f5f9; /* Đường kẻ mờ bên trái */
-  transition: border-color 0.3s ease;
-}
-
-.skill-group:hover {
-  border-left-color: var(--accent); /* Đổi màu khi hover giống project card */
-}
-.skill-title{
-  font-size: 0.7rem; /* Nhỏ lại một chút để tinh tế hơn */
   letter-spacing: 0.15em;
+  margin-bottom: 50px;
+}
+
+/* Phần Liên hệ */
+.contact-box {
+  border-top: 2px dashed #E5E7EB;
+  padding-top: 40px;
+}
+
+.contact-label {
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 15px;
   text-transform: uppercase;
-  opacity: 0.8;
+  letter-spacing: 0.05em;
 }
 
-.about-skills .tag {
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.about-skills .tag:hover {
-  background: #eff6ff;
+.contact-email {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: var(--accent);
-  transform: translateY(-2px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  word-break: break-all; /* Ngăn text bị tràn trên mobile */
 }
 
-.about-content strong {
-  color: var(--text-main);
-  font-weight: 600;
-  border-bottom: 1px dotted var(--accent); /* Nhấn mạnh nhẹ nhàng kiểu học thuật */
+.contact-email:hover {
+  color: var(--accent-hover);
+  transform: scale(1.05); /* Phóng to nhẹ khi trỏ chuột vào */
 }
 
+/* Footer */
+.footer {
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  font-weight: 500;
+}
 
-/* --- RESPONSIVE CHO MOBILE / TABLET --- */
-@media (max-width: 1024px) {
-  .layout-wrapper { 
-    flex-direction: column; 
-  }
-  
-  .sidebar { 
-    width: 100%; 
-    height: auto;           /* Phá bỏ giới hạn 100vh của desktop */
-    position: relative;     /* QUAN TRỌNG: Gỡ bỏ sticky để cuộn tự nhiên cùng trang */
-    padding: 60px 40px; 
-    border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-  
-  /* Giới hạn lại height của inner trên mobile để không bị thừa khoảng trống */
-  .sidebar-inner {
-    height: auto;
-  }
-  
-  .main-content { 
-    width: 100%; 
-    padding: 40px 20px; /* Chỉnh lại padding nhỏ hơn một chút trên mobile cho đẹp */
-  }
+/* Responsive cho Mobile */
+@media (max-width: 600px) {
+  .content-container { padding: 40px 20px; }
+  .brand-alias { font-size: 4.5rem; }
+  .brand-fullname { font-size: 0.9rem; letter-spacing: 0.15em; }
+  .sale-badge { font-size: 1rem; }
+  .contact-email { font-size: 1.6rem; }
 }

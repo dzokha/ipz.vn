@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
+/* --- BIẾN MÀU SẮC --- */
 :root {
-  --bg-color: #F8FAFC; 
-  --text-main: #0F172A; 
-  --text-secondary: #475569;
-  --text-light: #94A3B8;
-  --accent: #2563EB; 
-  --border-subtle: #E2E8F0;
+  --bg-main: #F3F4F6;          /* Nền xám nhạt sang trọng */
+  --text-main: #111827;        /* Chữ đen đậm */
+  --text-secondary: #6B7280;   /* Chữ xám phụ */
+  --accent: #2563EB;           /* Màu xanh dương tin cậy */
+  --accent-hover: #1D4ED8;     /* Xanh dương đậm khi trỏ chuột */
+  --success-bg: #DEF7EC;       /* Nền xanh lá báo hiệu "Available" */
+  --success-text: #03543F;     /* Chữ xanh lá đậm */
 }
 
-body {
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: var(--bg-color);
+  padding: 0;
+}
+
+body, html {
+  background-color: var(--bg-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text-main);
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  height: 100%;
 }

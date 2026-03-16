@@ -1,4 +1,4 @@
-# dzokha.vn
+# ipz.vn
 1. cài đặt Node.js
 https://nodejs.org/en/download
 ```

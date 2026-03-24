@@ -12,14 +12,14 @@ function App() {
           <div className="brand-box">
              <img src={logoShield} alt="Logo IPZ" className="brand-logo" />
              <div className="brand-text">
-               <h1 className="brand-alias">IPZ</h1>
-               <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
+               <h1 className="brand-alias">I P Z</h1>
+               <h2 className="brand-fullname">ZERO TRUST</h2>
              </div>
           </div>
           
           <p className="hero-description">
-            <strong>Bảo vệ tài sản số & ý tưởng kinh doanh của bạn.</strong><br/>
-            Giải pháp kết hợp An ninh mạng & Sở hữu trí tuệ dành cho Doanh nghiệp vừa và nhỏ.
+            <strong>Bảo vệ tài sản số & ý tưởng kinh doanh của bạn</strong><br/>
+            Giải pháp kết hợp An ninh mạng & Sở hữu trí tuệ dành cho Doanh nghiệp
           </p>
           <a href="#contact" className="btn-primary">Nhận tư vấn miễn phí</a>
         </div>

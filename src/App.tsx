@@ -1,14 +1,22 @@
 import './styles/App.css';
+// Import logo (giả định bạn đã lưu vào src/assets/logo.png)
+import logoShield from './assets/images/ipz.png'; 
 
 function App() {
   return (
     <div className="page-wrapper">
       
-      {/* HEADER: Chứa tiêu đề H1 chuẩn SEO và thông điệp chính */}
+      {/* HEADER: Chứa Logo và Tiêu đề H1 chuẩn SEO */}
       <header className="hero-header">
         <div className="container text-center">
-          <h1 className="brand-alias">IPZ</h1>
-          <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
+          <div className="brand-box">
+             <img src={logoShield} alt="Logo IPZ" className="brand-logo" />
+             <div className="brand-text">
+               <h1 className="brand-alias">IPZ</h1>
+               <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
+             </div>
+          </div>
+          
           <p className="hero-description">
             <strong>Bảo vệ tài sản số & ý tưởng kinh doanh của bạn.</strong><br/>
             Giải pháp kết hợp An ninh mạng & Sở hữu trí tuệ dành cho Doanh nghiệp vừa và nhỏ.
@@ -21,7 +29,7 @@ function App() {
       <main className="main-content">
         <div className="container">
           
-          {/* Lưới 1: Đặt Vấn đề & Giải pháp cạnh nhau để dễ đối chiếu */}
+          {/* Lưới 1: Đặt Vấn đề & Giải pháp cạnh nhau */}
           <div className="content-grid mb-40">
             <section className="info-card problem-card">
               <h2 className="card-title">Doanh nghiệp đang đối mặt với gì?</h2>
@@ -66,9 +74,9 @@ function App() {
             <section className="info-card outline-card">
               <h2 className="card-title">Về chuyên gia</h2>
               <p className="about-text">
-                <strong>16 năm kinh nghiệm</strong> trong quản lý nhà nước, thẩm định dự án công nghệ, sở hữu trí tuệ và an ninh mạng. 
+                <strong>16 năm kinh nghiệm thực chiến</strong> trong quản lý nhà nước, thẩm định dự án công nghệ, sở hữu trí tuệ và an ninh mạng. 
                 <br/><br/>
-                Đồng thời là giảng viên, tác giả sách và nhà nghiên cứu khoa học thực chiến.
+                Đồng thời là giảng viên, tác giả sách và nhà nghiên cứu khoa học.
               </p>
             </section>
           </div>

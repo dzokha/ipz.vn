@@ -1,11 +1,11 @@
-/* --- BIẾN MÀU CƠ BẢN (Nên giữ ở globals.css hoặc đầu App.css) --- */
+/* --- BIẾN MÀU SẮC (Cập nhật bảng màu hiện đại hơn) --- */
 :root {
   --bg-main: #F8FAFC;          /* Nền sáng dịu mắt */
   --text-main: #0F172A;        /* Xanh đen tối (hiện đại hơn đen tuyền) */
-  --text-secondary: #475569;
-  --accent: #2563EB;
-  --surface: #FFFFFF;
-  --border: #E2E8F0;
+  --text-secondary: #475569;   /* Chữ xám phụ */
+  --accent: #2563EB;           /* Màu xanh dương tin cậy */
+  --border: #E2E8F0;           /* Đường viền xám nhẹ */
+  --surface: #FFFFFF;          /* Nền các thẻ Card */
 }
 
 /* --- BỐ CỤC CHUNG --- */
@@ -30,21 +30,34 @@
   padding: 60px 0 40px;
 }
 
+/* Phần Logo + Brand Text cạnh nhau */
+.brand-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+}
+
 .brand-alias {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: -0.05em;
   color: var(--accent);
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .brand-fullname {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: var(--text-secondary);
-  margin-bottom: 24px;
 }
 
 .hero-description {
@@ -79,7 +92,7 @@
   transform: translateY(-2px);
 }
 
-/* --- MAIN CONTENT & GRID --- */
+/* --- MAIN CONTENT & GRID (Tái cấu trúc gọn lại) --- */
 .main-content {
   padding-bottom: 60px;
 }
@@ -111,7 +124,7 @@
   padding-bottom: 12px;
 }
 
-/* Danh sách Vấn đề */
+/* Danh sách Problem (Thẻ X đỏ) */
 .list-styled {
   list-style: none;
   padding: 0;
@@ -197,6 +210,7 @@
   margin-bottom: 32px;
 }
 
+/* Phần Liên hệ nổi bật nhất */
 .contact-action {
   display: inline-block;
   background-color: var(--bg-main);
@@ -231,12 +245,14 @@
 
 /* --- RESPONSIVE CHO MOBILE --- */
 @media (max-width: 768px) {
+  .brand-box { flex-direction: column; text-align: center; gap: 8px; }
+  .brand-logo { height: 50px; }
   .content-grid {
     grid-template-columns: 1fr; /* Gập thành 1 cột trên điện thoại */
     gap: 16px;
   }
   
-  .brand-alias { font-size: 3.5rem; }
+  .brand-alias { font-size: 3rem; }
   .hero-description strong { font-size: 1.2rem; }
   .contact-email { font-size: 1.4rem; }
   .service-tags li { flex-direction: column; align-items: flex-start; gap: 4px; }

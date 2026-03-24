@@ -2,32 +2,97 @@ import './styles/App.css';
 
 function App() {
   return (
-    <div className="landing-wrapper">
-      <div className="content-container">
-        
-        {/* Phần Tên thương hiệu */}
-        <h1 className="brand-alias">IPZ</h1>
-        <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
-        
-        {/* Điểm nhấn Rao bán */}
-        <div className="sale-badge">TÊN MIỀN ĐANG ĐƯỢC RAO BÁN</div>
-        <p className="sale-subtitle">Bảo vệ Tài sản Trí tuệ của doanh nghiệp bằng tiêu chuẩn An ninh mạng khắt khe và tuyệt đối nhất.</p>
-        
-        {/* Thông tin liên hệ chuyên nghiệp */}
-        <div className="contact-box">
-          <p className="contact-label">LIÊN HỆ MUA TÊN MIỀN:</p>
-          {/* Thẻ <a> với mailto giúp khách hàng click vào là mở ứng dụng gửi mail ngay */}
-          <a href="mailto:dzokha1010@gmail.com" className="contact-email">
-            dzokha1010@gmail.com
-          </a>
+    <div className="page-wrapper">
+      
+      {/* HEADER: Chứa tiêu đề H1 chuẩn SEO và thông điệp chính */}
+      <header className="hero-header">
+        <div className="container text-center">
+          <h1 className="brand-alias">IPZ</h1>
+          <h2 className="brand-fullname">INTELLECTUAL PROTECTION ZERO-TRUST</h2>
+          <p className="hero-description">
+            <strong>Bảo vệ tài sản số & ý tưởng kinh doanh của bạn.</strong><br/>
+            Giải pháp kết hợp An ninh mạng & Sở hữu trí tuệ dành cho Doanh nghiệp vừa và nhỏ.
+          </p>
+          <a href="#contact" className="btn-primary">Nhận tư vấn miễn phí</a>
         </div>
-        
-        {/* Footer */}
-        <div className="footer">
-          <p>© 2026 IPZ. All Rights Reserved.</p>
-        </div>
+      </header>
 
-      </div>
+      {/* MAIN: Chứa nội dung lõi của trang */}
+      <main className="main-content">
+        <div className="container">
+          
+          {/* Lưới 1: Đặt Vấn đề & Giải pháp cạnh nhau để dễ đối chiếu */}
+          <div className="content-grid mb-40">
+            <section className="info-card problem-card">
+              <h2 className="card-title">Doanh nghiệp đang đối mặt với gì?</h2>
+              <ul className="list-styled error-list">
+                <li>Bị hack website, rò rỉ hoặc mất dữ liệu quan trọng</li>
+                <li>Bị sao chép phần mềm, đánh cắp ý tưởng kinh doanh</li>
+                <li>Lúng túng trong thủ tục đăng ký bảo hộ sở hữu trí tuệ</li>
+                <li>Thiếu đội ngũ IT chuyên sâu về an toàn thông tin</li>
+              </ul>
+            </section>
+
+            <section className="info-card solution-card">
+              <h2 className="card-title">IPZ giúp bạn giải quyết như thế nào?</h2>
+              <div className="solution-items">
+                <div className="item">
+                  <h3>🛡️ Audit bảo mật</h3>
+                  <p>Kiểm tra toàn diện hệ thống, phát hiện và vá lỗ hổng.</p>
+                </div>
+                <div className="item">
+                  <h3>⚖️ Bảo vệ sở hữu trí tuệ</h3>
+                  <p>Tư vấn chiến lược và hướng dẫn đăng ký bảo hộ tài sản số.</p>
+                </div>
+                <div className="item">
+                  <h3>👥 Đào tạo nội bộ</h3>
+                  <p>Nâng cao nhận thức bảo mật cho toàn bộ nhân sự.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* Lưới 2: Dịch vụ & Chuyên gia */}
+          <div className="content-grid">
+            <section className="info-card outline-card">
+              <h2 className="card-title">Dịch vụ chính</h2>
+              <ul className="service-tags">
+                <li>Gói Audit nhanh <span>(3 - 10 triệu VNĐ)</span></li>
+                <li>Tư vấn bảo hộ IP <span>(5 - 20 triệu VNĐ)</span></li>
+                <li>Đào tạo an ninh mạng cho doanh nghiệp</li>
+              </ul>
+            </section>
+
+            <section className="info-card outline-card">
+              <h2 className="card-title">Về chuyên gia</h2>
+              <p className="about-text">
+                <strong>16 năm kinh nghiệm</strong> trong quản lý nhà nước, thẩm định dự án công nghệ, sở hữu trí tuệ và an ninh mạng. 
+                <br/><br/>
+                Đồng thời là giảng viên, tác giả sách và nhà nghiên cứu khoa học thực chiến.
+              </p>
+            </section>
+          </div>
+
+        </div>
+      </main>
+
+      {/* FOOTER & CTA: Gọn gàng, tập trung chuyển đổi (Conversion) */}
+      <footer id="contact" className="site-footer">
+        <div className="container text-center">
+          <h2 className="cta-title">Bắt đầu bảo vệ doanh nghiệp ngay hôm nay</h2>
+          <p className="cta-desc">Đăng ký nhận tư vấn miễn phí trong 30 phút từ chuyên gia.</p>
+          
+          <div className="contact-action">
+            <p className="contact-label">GỬI YÊU CẦU ĐẾN EMAIL:</p>
+            <a href="mailto:dzokha1010@gmail.com" className="contact-email">
+              dzokha1010@gmail.com
+            </a>
+          </div>
+          
+          <p className="copyright">© 2026 IPZ.vn - Bảo vệ tài sản số & Sở hữu trí tuệ.</p>
+        </div>
+      </footer>
+
     </div>
   );
 }
